@@ -1,0 +1,781 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>	BrainfArt Admin Panel</title>
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Behavioral Meta Data -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" href="#">
+    <!-- Place favicon.ico in the root directory -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/loader-style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+    <link rel="stylesheet" href="assets/css/profile.css">
+
+    <link href="assets/js/footable/css/footable.core.css?v=2-0-1" rel="stylesheet" type="text/css" />
+    <link href="assets/js/footable/css/footable.standalone.css" rel="stylesheet" type="text/css" />
+    <link href="assets/js/footable/css/footable-demos.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="assets/js/dataTable/lib/jquery.dataTables/css/DT_bootstrap.css" />
+    <link rel="stylesheet" href="assets/js/dataTable/css/datatables.responsive.css" />
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/minus.png">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!-- TOP NAVBAR -->
+    <nav role="navigation" class="navbar navbar-static-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="entypo-menu"></span>
+                </button>
+                <button class="navbar-toggle toggle-menu-mobile toggle-left" type="button">
+                    <span class="entypo-list-add"></span>
+                </button>
+
+                <div id="logo-mobile" class="visible-xs">
+                    <h1>BRAINFART
+                        <span>admin</span>
+                    </h1>
+                </div>
+
+            </div>
+
+
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+
+                    <li class="dropdown">
+
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i style="font-size:20px;" class="icon-conversation"></i><div class="noft-red">3</div></a>
+
+
+                        <ul style="margin: 11px 0 0 9px;" role="menu" class="dropdown-menu dropdown-wrap">
+                            <li>
+                                <a href="#">
+                                    <img alt="" class="img-msg img-circle" src="./assets/img/developer5.png">First/Last name <b>Just Now</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" class="img-msg img-circle" src="./assets/img/developer6.png">First/Last name <b>3 Min Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" class="img-msg img-circle" src="./assets/img/developer7.png">First/Last name <b>2 Hours Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" class="img-msg img-circle" src="./assets/img/developer2.png"><i>First/Last name </i>  <b>1 Day Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" class="img-msg img-circle" src="./assets/img/developer4.png"><i>First/Last name </i>  <b>2 Mounth Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div>See All Admins</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i style="font-size:19px;" class="icon-warning tooltitle"></i><div class="noft-green">5</div></a>
+                        <ul style="margin: 12px 0 0 0;" role="menu" class="dropdown-menu dropdown-wrap">
+                            <li>
+                                <a href="#">
+                                    <img src="../USER/img/test-cat/html.png" alt="Front End" title="Front End" style="width: 10%"><i>Lorem ipsum dolor sit amet...</i>  <b>Just now</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img src="../USER/img/test-cat/server-purple.png" alt="Front End" title="Front End" style="width: 10%"><i>Lorem ipsum dolor sit amet...</i>  <b>3 Min Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img src="../USER/img/test-cat/qa.png" alt="Front End" title="Front End" style="width: 10%"><i>Lorem ipsum dolor sit amet...</i>  <b>
+                                    25 Min Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img src="../USER/img/test-cat/android.png" alt="Front End" title="Front End" style="width: 10%"><i>Lorem ipsum dolor sit amet ...</i>  <b>2 Hours Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img src="../USER/img/test-cat/apple.png" alt="Front End" title="Front End" style="width: 10%"><i>Lorem ipsum dolor sit amet...</i>  <b>1 Day Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div>See All New Tests</div>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <div id="nt-title-container" class="navbar-left running-text visible-lg">
+                    <ul class="date-top">
+                        <li class="entypo-calendar" style="margin-right:5px"></li>
+                        <li id="Date"></li>
+
+
+                    </ul>
+
+                    <ul id="digital-clock" class="digital">
+                        <li class="entypo-clock" style="margin-right:5px"></li>
+                        <li class="hour"></li>
+                        <li>:</li>
+                        <li class="min"></li>
+                        <li>:</li>
+                        <li class="sec"></li>
+                        <li class="meridiem"></li>
+                    </ul>
+                    <ul id="nt-title">
+                        <li><i class="fontawesome-hand-right"></i> Оптимизация препятствует эволюции.
+                        </li>
+                        <li><i class="fontawesome-hand-right"></i> Трудное детство… Килобайтные игрушки.
+                        </li>
+
+                        <li><i class="fontawesome-hand-right"></i> Кулер – тоже вертолет, но маленький.
+                        </li>
+
+                        <li><i class="fontawesome-hand-right"></i> Мой дом там, где мой компьютер.
+                        </li>
+
+                        <li><i class="wfontawesome-hand-right"></i> Моя любимая порода собак - @
+                        </li>
+                        <li><i class="fontawesome-hand-right"></i> Программист - это новая форма жизни.
+                        </li>
+
+                </div>
+
+                <ul style="margin-right:0;" class="nav navbar-nav navbar-right">
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" class="admin-pic img-circle" src="./assets/img/developer.png">Hi, Super Admin!
+                        </a>
+                    </li>
+                    <li class="hidden-xs">
+                        <a class="toggle-left" href="#">
+                            <span style="font-size:20px;" class="entypo-list-add"></span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- /END OF TOP NAVBAR -->
+
+    <!-- SIDE MENU -->
+    <div id="skin-select">
+        <div id="logo">
+            <h1>BRAINFART
+                <span>admin</span>
+            </h1>
+        </div>
+
+        <a id="toggle">
+            <span class="entypo-menu"></span>
+        </a>
+        <div class="dark">
+            <form action="#">
+                <span>
+                    <input type="text" name="search" value="" class="search rounded id_search" placeholder="Search Menu..." autofocus />
+                </span>
+            </form>
+        </div>
+
+        <div class="search-hover">
+            <form id="demo-2">
+                <input type="search" placeholder="Search Menu..." class="id_search">
+            </form>
+        </div>
+
+        <!--Left Sidebar-->
+        <div class="skin-part">
+            <div id="tree-wrap">
+                <div class="side-bar">
+                    <ul class="topnav menu-left-nest">
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="index.html" title="All Tests">
+                                <i class="icon-document"></i>
+                                <span>All Tests</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="users.html" title="All Users">
+                                <i class="icon-user"></i>
+                                <span>All Users</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="#" title="Create a Test">
+                                <i class="icon-document-edit"></i>
+                                <span>Create a Test</span>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip" href="#" title="Test Categories">
+                                <i class="icon-view-thumb"></i>
+                                <span>Test Categories</span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="#" title=""><i class="icon-media-record"></i><span>Front End</span></a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="#" title=""><i class="icon-user"></i><span>Back end</span></a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="#" title=""><i class="entypo-newspaper"></i><span>QA</span></a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="#" title=""><i class="fontawesome-money"></i><span>Android Dev</span></a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="#" title=""><i class="entypo-clock"></i><span>Apple Dev</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip " href="login.html" title="login">
+                                <i class="icon-download"></i>
+                                <span>Login</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF SIDE MENU -->
+
+
+
+    <!--  PAPER WRAP -->
+    <div class="wrap-fluid">
+        <div class="container-fluid paper-wrap bevel tlbr">
+
+            <!-- CONTENT -->
+            <!--TITLE -->
+            <div class="row">
+                <div id="paper-top">
+                    <div class="col-sm-3">
+                        <h2 class="tittle-content-header">
+                            <i class="icon-user"></i>
+                            <span>USER'S PROFILE
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <div class="col-sm-7">
+                        <div class="devider-vertical visible-lg"></div>
+                        <div class="tittle-middle-header">
+
+                            <div class="alert">
+                                <button type="button" class="close" data-dismiss="alert">×</button>
+                                <span class="tittle-alert entypo-info-circled"></span>
+                                Welcome back,&nbsp;
+                                <strong>Super Admin!</strong>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-2">
+                        <div class="devider-vertical visible-lg"></div>
+                    </div>
+                </div>
+            </div>
+            <!--/ TITLE -->
+
+            <!-- BREADCRUMB -->
+            <ul id="breadcrumb">
+                <li>
+                    <span class="entypo-home"></span>
+                </li>
+                <li><i class="fa fa-lg fa-angle-right"></i>
+                </li>
+                <li><a href="#" title="Sample page 1">Home</a>
+                </li>
+                <li><i class="fa fa-lg fa-angle-right"></i>
+                </li>
+                <li><a href="#" title="Sample page 1">User's Profile</a>
+                </li>
+            </ul>
+
+            <!-- END OF BREADCRUMB -->
+
+
+            <div class="content-wrap">
+                <!-- PROFILE -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="well profile">
+                            <div class="col-sm-12">
+                                <div class="col-xs-12 col-sm-4 text-center">
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item text-left">
+                                            <span class="entypo-user"></span>&nbsp;&nbsp;Profile</li>
+                                        <li class="list-group-item text-center">
+                                            <img src="./assets/img/profile.png" alt="" class="img-circle img-responsive img-profile">
+
+                                        </li>
+                                        <li class="list-group-item text-right">
+                                            <span class="pull-left">
+                                                <strong>User Id</strong>
+                                            </span>05653
+                                        </li>
+                                        <li class="list-group-item text-center">
+                                            <span class="pull-left">
+                                                <strong>Ratings</strong>
+                                            </span>
+
+
+                                            <div class="ratings">
+
+                                                <a href="#">
+                                                    <span class="fa fa-star"></span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa fa-star"></span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa fa-star"></span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa fa-star"></span>
+                                                </a>
+                                                <a href="#">
+                                                    <span class="fa fa-star-o"></span>
+                                                </a>
+
+                                            </div>
+
+
+                                        </li>
+
+                                        <li class="list-group-item text-right">
+                                            <span class="pull-left">
+                                                <strong>Email</strong>
+                                            </span>mail@mail.com
+                                        </li>
+                                        <li class="list-group-item text-right">
+                                            <span class="pull-left">
+                                                <strong>Phone</strong>
+                                            </span>+38 (000) 000-00-00
+                                        </li>
+                                        <li class="list-group-item text-right">
+                                            <span class="pull-left">
+                                                <strong>Joined</strong>
+                                            </span>206/04/2016
+                                        </li>
+                                        <li class="list-group-item text-right">
+                                            <span class="pull-left">
+                                                <strong>Last Update</strong>
+                                            </span>01/06/2016
+                                        </li>
+                                        <li class="list-group-item text-right">
+                                            <span class="pull-left">
+                                                <strong>Test categories</strong>
+                                            </span><span class="tags">Front end</span>
+                                            <span class="tags">QA</span>
+                                            <span class="tags">Android dev</span>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-xs-12 col-sm-8 profile-name">
+                                    <h2>First name Last name
+                                        <span class="pull-right social-profile">
+                                            <div id="wrapper-bouton-icon">
+                                                <div id="bouton-app"><img src="../USER/img/test-cat/apple.png" alt="Apple Developer" title="Apple Developer"></div>
+                                                <div id="bouton-and"><img src="../USER/img/test-cat/android.png" alt="Android Developers" title="Android Developers"></div>
+                                                <div id="bouton-qa"><img src="../USER/img/test-cat/qa.png" alt="Quality assurance" title="Quality assurance"></div>
+                                                <div id="bouton-back"><img src="../USER/img/test-cat/server-purple.png" alt="Back End" title="Back End"></div>
+                                                <div id="bouton-front"><img src="../USER/img/test-cat/html.png" alt="Front End" title="Front End"></div>
+                                            </div>
+                                        </span>
+                                    </h2>
+                                    <hr>
+                                    <hr>
+
+                                    <h5>
+                                        <span class="entypo-arrows-ccw"></span>&nbsp;&nbsp;Пройденные тесты</h5>
+
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-striped table-condensed">
+
+                                            <tbody>
+                                            <tr>
+                                                <th>Категория</th>
+                                                <th>Название теста</th>
+                                                <th>Результат</th>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa fa-star">Front end</i></td>
+                                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</a></td>
+                                                <td><span class="status-metro status-active" title="Perfect">100%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">
+                                                    <ul>
+                                                        <li>Вопрос № 1 - 10/10 баллов</li>
+                                                        <li>Вопрос № 2 - 3/10 баллов</li>
+                                                        <li>Вопрос № 3 - 5/10 баллов</li>
+                                                        <li>Вопрос № 4 - 9/10 баллов</li>
+                                                        <li>Вопрос № 5 - 1/10 баллов</li>
+                                                        <li>Вопрос № 6 - 8/10 баллов</li>
+                                                        <li>Вопрос № 7 - 7/10 баллов</li>
+                                                        <li>Вопрос № 8 - 10/10 баллов</li>
+                                                        <li>Вопрос № 9 - 0/10 баллов</li>
+                                                        <li>Вопрос № 10 - 9/10 баллов</li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa fa-star">Front end</i></td>
+                                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</a></td>
+                                                <td><span class="status-metro status-disabled" title="Good">50%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa fa-star">Back end</i></td>
+                                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</a></td>
+                                                <td><span class="status-metro status-suspended" title="Bad">10%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa fa-star">QA</i></td>
+                                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</a></td>
+                                                <td><span class="status-metro status-active" title="Perfect">100%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa fa-star">back end</i></td>
+                                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</a></td>
+                                                <td><span class="status-metro status-disabled" title="Good">50%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa fa-star">Front end</i></td>
+                                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</a>.</td>
+                                                <td><span class="status-metro status-suspended" title="Bad">10%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa fa-star">back end</i></td>
+                                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</a></td>
+                                                <td><span class="status-metro status-disabled" title="Good">50%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa fa-star">Front end</i></td>
+                                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</a></td>
+                                                <td><span class="status-metro status-suspended" title="Bad">10%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa fa-star">back end</i></td>
+                                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</a></td>
+                                                <td><span class="status-metro status-disabled" title="Good">50%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><i class="fa fa-star">Front end</i></td>
+                                                <td><a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua..</a></td>
+                                                <td><span class="status-metro status-suspended" title="Bad">10%</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="3">
+                                                    <div class="btn-group pull-right">
+                                                        <button type="button" class="btn">
+                                                            <span class="entypo-left-open"></span>
+                                                        </button>
+                                                        <button type="button" class="btn">
+                                                            <span class="entypo-right-open"></span>
+                                                        </button>
+                                                    </div>
+                                                    <div class="btn-group pull-right" style="margin-right:10px;">
+                                                        <button type="button" class="btn">1-10 of 20</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="col-xs-12 divider text-center">
+                                <div class="col-xs-12 col-sm-4 emphasis">
+                                    <h2>
+                                        <strong>15</strong>
+                                    </h2>
+                                    <p>
+                                        <small>Тестов пройдено</small>
+                                    </p>
+                                    <button class="btn btn-success btn-block"></button>
+                                </div>
+                                <div class="col-xs-12 col-sm-4 emphasis">
+                                    <h2>
+                                        <strong>2</strong>
+                                    </h2>
+                                    <p>
+                                        <small>Категории тестов</small>
+                                    </p>
+                                    <button class="btn btn-info btn-block"></button>
+                                </div>
+                                <div class="col-sm-4 emphasis">
+                                    <h2>
+                                        <strong>89%</strong>
+                                    </h2>
+                                    <p>
+                                        <small>Результат</small>
+                                    </p>
+                                    <button class="btn btn-default btn-block"></button>                                      </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <!-- END OF BLANK PAGE -->
+
+                <!-- END OF PROFILE -->
+
+
+                <!-- /END OF CONTENT -->
+
+            <!-- FOOTER -->
+            <div class="footer-space"></div>
+            <div id="footer">
+                <div class="devider-footer-left"></div>
+                <div class="time">
+                    <p id="spanDate"></p>
+                    <p id="clock"></p>
+                </div>
+                <div class="devider-footer"></div>
+            </div>
+            <!-- / END OF FOOTER -->
+
+        </div>
+    </div>
+    <!--  END OF PAPER WRAP -->
+
+       <!-- RIGHT SLIDER CONTENT -->
+    <div class="sb-slidebar sb-right">
+        <div style="margin-top:0;" class="right-wrapper">
+            <div class="row">
+                <h3>
+                    <span><i class="entypo-chat"></i>&nbsp;&nbsp;ALL ADMINS</span>
+                </h3>
+                <div class="col-sm-12">
+                    <span class="label label-warning label-chat">Super Admins</span>
+                    <ul class="chat super">
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <img alt="" class="img-chat img-circle" src="./assets/img/developer2.png">
+                                </span><b>First name Last name</b>
+                                <br><i>Lorem ipsum</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <img alt="" class="img-chat img-circle" src="./assets/img/developer3.png">
+                                </span><b>First name Last name</b>
+                                <br><i>Lorem ipsum</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <img alt="" class="img-chat img-circle" src="./assets/img/developer4.png">
+                                </span><b>First name Last name</b>
+                                <br><i>Lorem ipsum</i>
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                    <span class="label label-chat">Admins</span>
+                    <ul class="chat admin">
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <img alt="" class="img-chat img-offline img-circle" src="./assets/img/developer5.png">
+                                </span><b>First name Last name</b>
+                                <br><i>Lorem ipsum</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <img alt="" class="img-chat img-offline img-circle" src="./assets/img/developer6.png">
+                                </span><b>First name Last name</b>
+                                <br><i>Lorem ipsum</i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span>
+                                    <img alt="" class="img-chat img-offline img-circle" src="./assets/img/developer7.png">
+                                </span><b>First name Last name</b>
+                                <br><i>Lorem ipsum</i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- END OF RIGHT SLIDER CONTENT-->
+
+
+
+        <!-- MAIN EFFECT -->
+        <script type="text/javascript" src="assets/js/preloader.js"></script>
+        <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+        <script type="text/javascript" src="assets/js/app.js"></script>
+        <script type="text/javascript" src="assets/js/load.js"></script>
+        <script type="text/javascript" src="assets/js/main.js"></script>
+
+        <!-- GAGE -->
+        <script type="text/javascript" src="assets/js/toggle_close.js"></script>
+        <script src="assets/js/footable/js/footable.js?v=2-0-1" type="text/javascript"></script>
+        <script src="assets/js/footable/js/footable.sort.js?v=2-0-1" type="text/javascript"></script>
+        <script src="assets/js/footable/js/footable.filter.js?v=2-0-1" type="text/javascript"></script>
+        <script src="assets/js/footable/js/footable.paginate.js?v=2-0-1" type="text/javascript"></script>
+        <script src="assets/js/footable/js/footable.paginate.js?v=2-0-1" type="text/javascript"></script>
+
+
+	    <script>
+        $( document ).ready(function() {
+            var buttonSuper = $( '<button type="button" class="btn btn-default btn-super">Разжаловать</button>'),
+                buttonAdmin = $( '<button type="button" class="btn btn-warning btn-admin">Повысить</button>'),
+
+                    liSuper = $('.chat.super li'),
+                    liAdmin = $('.chat.admin li');
+
+            // Super Admins
+            liSuper.mouseenter(function(){
+                $(this).append(buttonSuper);
+            });
+
+            liSuper.mouseleave(function(){
+                $(this).find('button').remove();
+            });
+
+            //Admins
+            liAdmin.mouseenter(function(){
+                $(this).append(buttonAdmin);
+            });
+
+            liAdmin.mouseleave(function(){
+                $(this).find('button').remove();
+            });
+
+        });
+    </script>
+
+
+        <script>
+            $(function() {
+                $('.footable-res').footable();
+            });
+        </script>
+        <script type="text/javascript">
+            $(function() {
+                $('#footable-res2').footable().bind('footable_filtering', function(e) {
+                    var selected = $('.filter-status').find(':selected').text();
+                    if (selected && selected.length > 0) {
+                        e.filter += (e.filter && e.filter.length > 0) ? ' ' + selected : selected;
+                        e.clear = !e.filter;
+                    }
+                });
+
+                $('.clear-filter').click(function(e) {
+                    e.preventDefault();
+                    $('.filter-status').val('');
+                    $('table.demo').trigger('footable_clear_filter');
+                });
+
+                $('.filter-status').change(function(e) {
+                    e.preventDefault();
+                    $('table.demo').trigger('footable_filter', {
+                        filter: $('#filter').val()
+                    });
+                });
+
+                $('.filter-api').click(function(e) {
+                    e.preventDefault();
+
+                    //get the footable filter object
+                    var footableFilter = $('table').data('footable-filter');
+
+                    alert('about to filter table by "tech"');
+                    //filter by 'tech'
+                    footableFilter.filter('tech');
+
+                    //clear the filter
+                    if (confirm('clear filter now?')) {
+                        footableFilter.clearFilter();
+                    }
+                });
+            });
+        </script>
+
+</body>
+
+</html>
+
+
+
+</body>
+
+</html>

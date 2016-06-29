@@ -1,0 +1,479 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>	BrainfArt Admin Panel</title>
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Behavioral Meta Data -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" href="#">
+    <!-- Place favicon.ico in the root directory -->
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/loader-style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+
+
+
+    <style type="text/css">
+    #loading {
+        text-align: center;
+        position:fixed;
+        top:54%;
+        left: 47%;
+        z-index: 2000;
+    }
+    #ajax-content {
+        margin-bottom: 0;
+    }
+    </style>
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script alt="" src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    <link rel="apple-touch-icon" href="#">
+    <!-- Place favicon.ico in the root directory -->
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status">&nbsp;</div>
+    </div>
+    <!-- TOP NAVBAR -->
+    <nav role="navigation" class="navbar navbar-static-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" class="navbar-toggle" type="button">
+                    <span class="entypo-menu"></span>
+                </button>
+                <button class="navbar-toggle toggle-menu-mobile toggle-left" type="button">
+                    <span class="entypo-list-add"></span>
+                </button>
+
+                <div id="logo-mobile" class="visible-xs">
+                    <h1>BRAINFART
+                        <span>admin</span>
+                    </h1>
+                </div>
+
+            </div>
+
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+
+                    <li class="dropdown">
+
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i style="font-size:20px;" class="icon-conversation"></i><div class="noft-red">3</div></a>
+
+
+                        <ul style="margin: 11px 0 0 9px;" role="menu" class="dropdown-menu dropdown-wrap">
+                            <li>
+                                <a href="#">
+                                    <img alt="" class="img-msg img-circle" src="./assets/img/developer5.png">First/Last name <b>Just Now</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" class="img-msg img-circle" src="./assets/img/developer6.png">First/Last name <b>3 Min Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" class="img-msg img-circle" src="./assets/img/developer7.png">First/Last name <b>2 Hours Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" class="img-msg img-circle" src="./assets/img/developer2.png"><i>First/Last name </i>  <b>1 Day Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img alt="" class="img-msg img-circle" src="./assets/img/developer4.png"><i>First/Last name </i>  <b>2 Mounth Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div>See All Admins</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#"><i style="font-size:19px;" class="icon-warning"></i><div class="noft-green">5</div></a>
+                        <ul style="margin: 12px 0 0 0;" role="menu" class="dropdown-menu dropdown-wrap">
+                            <li>
+                                <a href="#">
+                                    <img src="../USER/img/test-cat/html.png" alt="Front End" title="Front End" style="width: 10%"><i>Lorem ipsum dolor sit amet...</i>  <b>Just now</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img src="../USER/img/test-cat/server-purple.png" alt="Front End" title="Front End" style="width: 10%"><i>Lorem ipsum dolor sit amet...</i>  <b>3 Min Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img src="../USER/img/test-cat/qa.png" alt="Front End" title="Front End" style="width: 10%"><i>Lorem ipsum dolor sit amet...</i>  <b>
+                                    25 Min Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img src="../USER/img/test-cat/android.png" alt="Front End" title="Front End" style="width: 10%"><i>Lorem ipsum dolor sit amet ...</i>  <b>2 Hours Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">
+                                    <img src="../USER/img/test-cat/apple.png" alt="Front End" title="Front End" style="width: 10%"><i>Lorem ipsum dolor sit amet...</i>  <b>1 Day Ago</b>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <div>See All New Tests</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i style="font-size:20px;" class="icon-help"></i></a>
+                    </li>
+
+                </ul>
+                <div id="nt-title-container" class="navbar-left running-text visible-lg">
+                    <ul class="date-top">
+                        <li class="entypo-calendar" style="margin-right:5px"></li>
+                        <li id="Date"></li>
+
+
+                    </ul>
+
+                    <ul id="digital-clock" class="digital">
+                        <li class="entypo-clock" style="margin-right:5px"></li>
+                        <li class="hour"></li>
+                        <li>:</li>
+                        <li class="min"></li>
+                        <li>:</li>
+                        <li class="sec"></li>
+                        <li class="meridiem"></li>
+                    </ul>
+                    <ul id="nt-title">
+                        <li><i class="fontawesome-hand-right"></i> Оптимизация препятствует эволюции.
+                        </li>
+                        <li><i class="fontawesome-hand-right"></i> Трудное детство… Килобайтные игрушки.
+                        </li>
+
+                        <li><i class="fontawesome-hand-right"></i> Кулер – тоже вертолет, но маленький.
+                        </li>
+
+                        <li><i class="fontawesome-hand-right"></i> Мой дом там, где мой компьютер.
+                        </li>
+
+                        <li><i class="wfontawesome-hand-right"></i> Моя любимая порода собак - @
+                        </li>
+                        <li><i class="fontawesome-hand-right"></i> Программист - это новая форма жизни.
+                        </li>
+
+                </div>
+
+                <ul style="margin-right:0;" class="nav navbar-nav navbar-right">
+                    <li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" class="admin-pic img-circle" src="./assets/img/developer.png">Hi, Super Admin!
+                        </a>
+                    </li>
+                    <li class="hidden-xs">
+                        <a class="toggle-left" href="#">
+                            <span style="font-size:20px;" class="entypo-list-add"></span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- /END OF TOP NAVBAR -->
+
+    <!-- SIDE MENU -->
+    <div id="skin-select">
+        <div id="logo">
+            <h1>BRAINFART
+                <span>admin</span>
+            </h1>
+        </div>
+
+        <a id="toggle">
+            <span class="entypo-menu"></span>
+        </a>
+        <div class="dark">
+            <form action="#">
+                <span>
+                    <input type="text" name="search" value="" class="search rounded id_search" placeholder="Search Menu..." autofocus />
+                </span>
+            </form>
+        </div>
+
+        <div class="search-hover">
+            <form id="demo-2">
+                <input type="search" placeholder="Search Menu..." class="id_search">
+            </form>
+        </div>
+
+        <!--Left Sidebar-->
+        <div class="skin-part">
+            <div id="tree-wrap">
+                <div class="side-bar">
+                    <ul class="topnav menu-left-nest">
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="index.html" title="All Tests">
+                                <i class="icon-document"></i>
+                                <span>All Tests</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="users.html" title="All Users">
+                                <i class="icon-user"></i>
+                                <span>All Users</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip ajax-load" href="#" title="Create a Test">
+                                <i class="icon-document-edit"></i>
+                                <span>Create a Test</span>
+
+                            </a>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip" href="#" title="Test Categories">
+                                <i class="icon-view-thumb"></i>
+                                <span>Test Categories</span>
+                            </a>
+                            <ul>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="#" title=""><i class="icon-media-record"></i><span>Front End</span></a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="#" title=""><i class="icon-user"></i><span>Back end</span></a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="#" title=""><i class="entypo-newspaper"></i><span>QA</span></a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="#" title=""><i class="fontawesome-money"></i><span>Android Dev</span></a>
+                                </li>
+                                <li>
+                                    <a class="tooltip-tip2 ajax-load" href="#" title=""><i class="entypo-clock"></i><span>Apple Dev</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="tooltip-tip " href="login.html" title="login">
+                                <i class="icon-download"></i>
+                                <span>Login</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END OF SIDE MENU -->
+    <!--  CONTENT -->
+    <div class="wrap-fluid">
+        <div class="container-fluid paper-wrap bevel tlbr">
+
+
+
+
+
+            <!-- CONTENT -->
+            <div id="ajax-content"></div>
+            <!-- AJAX CONTENT -->
+            <!-- /CONTENT -->
+
+
+
+            <div class="content-wrap wrap-footer">
+                <!-- FOOTER -->
+                <div id="footer">
+                    <div class="devider-footer-left"></div>
+                    <div class="time">
+                        <p id="spanDate"></p>
+                        <p id="clock"></p>
+                    </div>
+                    <div class="devider-footer"></div>
+                    <!--   <ul>
+                        <li><i class="fa fa-facebook"></i>
+                        </li>
+                        <li><i class="fa fa-twitter"></i>
+                        </li>
+                        <li><i class="fa fa-google-plus"></i>
+                        </li>
+                    </ul> -->
+                </div>
+                <!-- / FOOTER -->
+            </div>
+            <!-- Container -->
+        </div>
+        <!-- wrap-fluid -->
+        <!--  CONTENT -->
+        <!--  PLUGIN -->
+        <!-- MAIN EFFECT -->
+
+        <!-- RIGHT SLIDER CONTENT -->
+        <div class="sb-slidebar sb-right">
+            <div style="margin-top:0;" class="right-wrapper">
+                <div class="row">
+                    <h3>
+                        <span><i class="entypo-chat"></i>&nbsp;&nbsp;ALL ADMINS</span>
+                    </h3>
+                    <div class="col-sm-12">
+                        <span class="label label-warning label-chat">Super Admins</span>
+                        <ul class="chat">
+                            <li>
+                                <a href="#">
+                                <span>
+                                    <img alt="" class="img-chat img-circle" src="./assets/img/developer2.png">
+                                </span><b>First name Last name</b>
+                                    <br><i>Lorem ipsum</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                <span>
+                                    <img alt="" class="img-chat img-circle" src="./assets/img/developer3.png">
+                                </span><b>First name Last name</b>
+                                    <br><i>Lorem ipsum</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                <span>
+                                    <img alt="" class="img-chat img-circle" src="./assets/img/developer4.png">
+                                </span><b>First name Last name</b>
+                                    <br><i>Lorem ipsum</i>
+                                </a>
+                            </li>
+
+
+                        </ul>
+
+                        <span class="label label-chat">Admins</span>
+                        <ul class="chat">
+                            <li>
+                                <a href="#">
+                                <span>
+                                    <img alt="" class="img-chat img-offline img-circle" src="./assets/img/developer5.png">
+                                </span><b>First name Last name</b>
+                                    <br><i>Lorem ipsum</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                <span>
+                                    <img alt="" class="img-chat img-offline img-circle" src="./assets/img/developer6.png">
+                                </span><b>First name Last name</b>
+                                    <br><i>Lorem ipsum</i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                <span>
+                                    <img alt="" class="img-chat img-offline img-circle" src="./assets/img/developer7.png">
+                                </span><b>First name Last name</b>
+                                    <br><i>Lorem ipsum</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- END OF RIGHT SLIDER CONTENT-->
+  <!-- MAIN EFFECT -->
+     <script type="text/javascript">
+        $(".ajax-load").click(function() {
+
+            $("#ajax-content").empty().append("<div id='loading'>LOADING...</div>");
+            $(".ajax-load").removeClass('current');
+            $(this).addClass('current');
+
+            $.ajax({
+                type: "GET",
+                async: true,
+                cache: false,
+
+                url: this.href,
+                success: function(html) {
+                    $("#ajax-content").empty().append(html);
+                },
+
+
+            });
+            return false;
+        });
+
+        $("#ajax-content").empty().append("<div id='loading'>LOADING...</div>");
+        $.ajax({
+            type: "GET",
+            async: true,
+            cache: false,
+
+            url: 'dashboard.html',
+            success: function(html) {
+                $("#ajax-content").empty().append(html);
+            },
+        });
+        </script>
+  
+    <script type="text/javascript" src="../aseets/js/load.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    
+  <script type="text/javascript" src="../aseets/js/preloader.js"></script>
+    <script type="text/javascript" src="../aseets/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../aseets/js/app.js"></script>
+
+
+
+
+
+   
+
+
+
+
+
+</body>
+
+</html>
